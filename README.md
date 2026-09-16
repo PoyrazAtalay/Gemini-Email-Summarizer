@@ -1,28 +1,38 @@
-# ✉️ Gemini Email Summarizer
+# 📧 Email Summarizer
 
-A lightweight Python tool that summarizes email threads and extracts key action items using Google Gemini.
-
----
+A simple Python tool that uses Google's Gemini API via the OpenAI SDK to automatically create quick summaries and subject lines for your emails.
 
 ## ✨ Features
 
-- **Quick Summaries:** Condenses long email threads into concise overviews.
-- **Action Items:** Extracts key takeaways into a 3-bullet action list.
-- **Gemini Powered:** Leverages Google Gemini models via OpenAI-compatible endpoints.
+- 🎯 **Smart Summaries**: Extracts a clear subject line and 3 key action points.
+- ⚡ **Fast & Lightweight**: Powered by `gemini-3.5-flash-lite`.
+- 🔐 **Secure Configuration**: Uses a pre-configured `.env` file for credentials.
 
----
+## 🚀 Quick Start
 
-## 🚀 Setup & Usage
-
-### 1. Clone & Install
+### 1. Install Dependencies
 
 ```bash
-git clone https://github.com/PoyrazAtalay/Gemini-Email-Summarizer.git
-cd Gemini-Email-Summarizer
 pip install openai python-dotenv
 ```
 
-### 2. Run
+*(or using `uv`)*
+
+```bash
+uv pip install openai python-dotenv
+```
+
+### 2. Configure Your API Key
+
+Open the existing `.env` file and replace `YOUR_API_KEY` with your actual Google Gemini API key:
+
+```env
+OPENAI_API_KEY="YOUR_API_KEY"
+```
+
+### 3. Run the App
+
+Paste your email text inside `app.py` and run:
 
 ```bash
 python app.py
